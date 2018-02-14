@@ -1047,7 +1047,7 @@ function wp_kses_attr( $element, $attr, $allowed_html, $allowed_protocols ) {
 	}
 
 	// Are any attributes allowed at all for this element?
-	if ( ! isset( $allowed_html[ strtolower( $element ) ] ) || true === $allowed_html[ strtolower( $element ) ] || count( $allowed_html[ strtolower( $element ) ] ) == 0 ) {
+	if ( ! isset( $allowed_html[ strtolower( $element ) ] ) || true === $allowed_html[ strtolower( $element ) ] || empty( $allowed_html[ strtolower( $element ) ] ) ) {
 		return "<$element$xhtml_slash>";
 	}
 
